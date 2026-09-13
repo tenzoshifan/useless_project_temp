@@ -27,6 +27,9 @@ The shared state keys are `pawride_currentBooking`, `pawride_selectedDriver`, an
 
 Main demo labels are intentionally playful: `appo povalle?`, `aare venam?`, and `Book cheyyu`.
 
+
+## PROJECT DEMO
+URL: https://hackhive-ten.vercel.app/
 ## Project files
 
 - `index.html` - home and product introduction
