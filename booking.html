@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E88E5">
+  <title>Book a ride | PawRide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Noto+Sans+Malayalam:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="booking">
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>PawRide</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-links"><a class="nav-link" href="index.html">Home</a><a class="nav-link active" href="booking.html">Book a Ride</a><a class="nav-link" href="mybookings.html">My Bookings</a></div>
+  </nav></header>
+  <main class="page-shell container">
+    <div class="page-intro"><p class="eyebrow"><span class="eyebrow-dot"></span> No animal left behind</p><h1 class="malayalam booking-title">ഡീറ്റെയിൽസ് കൊടുക്കൂ.. 🐾</h1><p>Give us the details. We’ll find a vehicle before your passenger starts making other plans.</p></div>
+    <form id="booking-form" class="booking-layout" novalidate>
+      <section class="form-panel"><div class="panel-title"><span class="panel-index">01</span><div><h2>The route</h2><p>Where should we pick you up?</p></div></div><div class="form-grid">
+        <label class="field full-field"><span>Pickup location</span><div class="input-wrap"><span>○</span><input id="pickup" name="pickup" type="text" placeholder="e.g. 24 Maple Street" autocomplete="street-address"><span class="field-error"></span></div></label>
+        <label class="field full-field"><span>Destination</span><div class="input-wrap"><span>⌖</span><input id="destination" name="destination" type="text" placeholder="Vet, home, shelter, or grooming center"><span class="field-error"></span></div></label>
+        <label class="field"><span>Date</span><div class="input-wrap"><span>▣</span><input id="date" name="date" type="date"><span class="field-error"></span></div></label>
+        <label class="field"><span>Time</span><div class="input-wrap"><span>◷</span><input id="time" name="time" type="time"><span class="field-error"></span></div></label>
+      </div></section>
+      <section class="form-panel"><div class="panel-title"><span class="panel-index">02</span><div><h2>About your passenger</h2><p>Big, small, or suspiciously clever. We’ve got you.</p></div></div>
+        <fieldset class="choice-field"><legend>Animal type <span class="field-error"></span></legend><div class="choice-grid animal-grid">
+          <button class="choice-card" type="button" data-animal="Dog"><img class="choice-image" src="dog pass.jpg" alt="Dog passenger"><span>Dog</span></button>
+          <button class="choice-card" type="button" data-animal="Elephant"><img class="choice-image" src="elep pass.jpg" alt="Elephant passenger"><span>Elephant</span></button>
+          <button class="choice-card" type="button" data-animal="Monkey"><img class="choice-image" src="monkey pass.jpg" alt="Monkey passenger"><span>Monkey</span></button>
+          <button class="choice-card" type="button" data-animal="Other"><span class="choice-emoji">🐾</span><span>Other</span></button>
+        </div><input id="animalType" type="hidden"></fieldset>
+        <fieldset class="choice-field"><legend>Choose a ride <span class="field-error"></span></legend><div class="choice-grid ride-grid">
+          <button class="ride-card" type="button" data-ride="Pet Car"><span class="ride-emoji">🚗</span><span><strong>Pet Car</strong><small>For regular-sized legends</small></span><b>✓</b></button>
+          <button class="ride-card" type="button" data-ride="Pet Van"><span class="ride-emoji">🚐</span><span><strong>Pet Van</strong><small>Extra room, zero judgement</small></span><b>✓</b></button>
+          <button class="ride-card" type="button" data-ride="Pet Bike"><span class="ride-emoji">🏍️</span><span><strong>Pet Bike</strong><small>For tiny, speedy passengers</small></span><b>✓</b></button>
+        </div><input id="rideType" type="hidden"></fieldset>
+        <div class="form-actions"><p id="form-status" class="form-status" role="alert"></p><button class="btn btn-primary btn-wide" type="submit">aare venam? <span>↗</span></button></div>
+      </section>
+    </form>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">✦</span><span>PawRide</span></a><span>Hackathon demo · 2026</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
